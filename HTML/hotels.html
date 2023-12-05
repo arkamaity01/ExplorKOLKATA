@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ExploreKOLKATA-Hotel_and_Trip Plans</title>
+
+
+<style>
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-text-color: #183b86;
+    --secondary-text-color:#577592;
+    --accent-color:#2294ed;
+    --accent-color-dark:#1d69a3;
+    --padding-inline-section:20px;
+    
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    color:var(--primary-text-color)
+}
+ .flex{
+    display: flex;
+ }
+ .container{
+    max-width: 1180px;
+    margin-inline: auto;
+    padding-inline: var(--padding-inline-section);
+ }
+ 
+ /* nav */
+.main-nav{
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.company-logo img{
+    width: 200px;
+}
+.nav-links{
+    flex-basis: 730px;
+}
+.nav-links ul{
+    justify-content: end;
+    gap: 50px;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+ul{
+    list-style: none;
+}
+/* hover */
+.hover-link{
+    color:#f5f5f5;
+    transition: 0.2s ease-out;
+}
+.hover-link:hover{
+    color: var(--accent-color);
+}
+
+.primary-button{
+    background-color: var(--accent-color);
+    border-radius: 6px;
+    font-weight: 700;
+    color: white !important;
+    padding: 12px 24px;
+    box-shadow: 0 0 2px var(--secondary-text-color);
+    transition: 0.2s ease-out;
+}
+
+.primary-button:hover{
+    background-color: var(--accent-color-dark);
+}
+.secondary-button{
+    border: 0.5px solid var(--secondary-text-color);
+    border-radius: 6px;
+    font-weight: 700;
+    color: var(--primary-text-color) !important;
+    padding: 12px 24px;
+    transition: 0.2s ease-out;
+}
+.secondary-button:hover{
+    border-color: var(--accent-color);
+    color: var(--accent-color) !important;
+}
+
+
+
+
+        /* Styles for the overlay */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        /* Styles for the pop-up box */
+        .popup {
+            background: #fff;
+            padding: 20px;
+            max-width: 80%;
+            max-height: 80%;
+            overflow-y: auto; /* Enable scrollbar for excess content */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            justify-content: space-between;
+        }
+
+        /* Close button styles */
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<center>
+
+
+  <nav>
+    <div class="container main-nav flex">
+        <a href="#" class="company-logo">
+            <img src="asset 1.png" alt="">
+        </a>
+        <div class="nav-links">
+      <ul class="flex">
+        <li><a href="Kolkata.html"class="hover-link">Home</a></li>
+        <li><a href="hotels.html"class="hover-link">Trip</a></li>
+        <li><a href="profile.html"class="hover-link">About Us</a></li>
+        <li><a href="Contact Us.html"class="hover-link">Contact Us</a></li>
+        <li><a href="login.html"class="hover-link primary-button">Login</a></li>
+      </ul>
+        </div>
+    </div>
+</nav>
+
+
+<!-- Trigger buttons -->
+<button onclick="openPopup('popup1')">3Night/4Day   package</button>
+<button onclick="openPopup('popup2')">4Night/5Day   package</button>
+<button onclick="openPopup('popup3')">6Night/7Day   package</button>
+
+<!-- Pop-up boxes -->
+<div id="popup1" class="overlay" onclick="closePopup('popup1')">
+    <div class="popup">
+        <span class="close-btn" onclick="closePopup('popup1')">X</span>
+        <h2>3Night/4Day   package    </h2>
+        <p><strong>Day 1:<br> Explore Historical and Cultural Sites</strong>
+                           <br><strong> Morning:</strong><strong> Arrival:</strong> Arrive in Kolkata and check into your hotel.
+                           <br><strong> Breakfast:</strong> Enjoy a traditional Bengali breakfast at a local restaurant.Check into hotel                      
+                           <br><strong> Afternoon:</strong> <strong> Victoria Memorial:</strong>Visit the iconic Victoria Memorial, a stunning white marble structure surrounded by beautiful gardens.St. Paul's Cathedral:Explore St. Paul's Cathedral, a masterpiece of Indo-Gothic architecture.                                                                                                                                                                                                                   
+                           <br><strong> Evening:</strong> <strong>Maidan and Princep Ghat:</strong>Take a leisurely stroll in Maidan, a vast open field, and visit Princep Ghat along the Hooghly River.                             
+                           <br><strong> Dinner:</strong> Have dinner at a local restaurant or try street food.<br><br>
+          
+          <strong>Day 2:</strong><br> Cultural Exploration
+                                   <br><strong> Morning:</strong><strong>Indian Museum:</strong>Spend the morning at the Indian Museum, one of the oldest and largest museums in India.
+                                   <br><strong> Afternoon:</strong><strong>Dakshineswar Kali Temple and Belur Math:</strong>Visit Dakshineswar Kali Temple and Belur Math, two significant religious landmarks on the banks of the Hooghly River.
+                                   <br><strong> Evening:</strong><strong>Howrah Bridge:</strong>Take a boat ride on the Hooghly River for a unique view of the Howrah Bridge.<strong> Shopping at New Market:</strong>Explore the bustling New Market for shopping and souvenirs.
+                                   <br><strong> Dinner:</strong>Have dinner at a local restaurant.<br><br>
+          
+          <strong>Day 3:</strong><br> Art and Culture
+                                    <br><strong> Morning: </strong><strong>Mother House:</strong>Visit Mother Teresa's Missionaries of Charity at Mother House.
+                                    <br><strong> Afternoon:</strong><strong> Kala Bhavan and Academy of Fine Arts:</strong>Explore the vibrant arts scene in Kolkata by visiting Kala Bhavan and the Academy of Fine Arts.
+                                    <br><strong> Evening:</strong><strong>Park Street:</strong>Enjoy the lively atmosphere of Park Street, known for its restaurants, cafes, and nightlife.
+                                    <br><strong> Dinner:</strong>Have dinner at one of the popular restaurants on Park Street.<br><br>
+          
+          <strong> Day 4:</strong><br> Heritage and Departure
+                                    <br><strong> Morning:</strong><strong>Kumartuli:</strong>Visit Kumartuli, the potters' quarter, known for its clay idols and traditional craftsmanship.
+                                    <br><strong>Afternoon:</strong>Lunch and Free Time: Have lunch and spend your afternoon shopping for last-minute souvenirs or relaxing at your hotel.
+                                    <br><strong> Evening:</strong><strong>Departure:</strong>Depending on your departure time, you may have some free time for additional exploration or relaxation.Airport Transfer:Head to the airport for your departure.
+          </p>
+    </div>
+</div>
+
+<div id="popup2" class="overlay" onclick="closePopup('popup2')">
+    <div class="popup">
+        <span class="close-btn" onclick="closePopup('popup2')">X</span>
+        <h2>4Night/5Day   package </h2>
+    <p><strong> Day 1:</strong><br> Arrival in Kolkata
+                 <br><strong>Morning:</strong>  Arrival and Check-In   Arrive in Kolkata and check into your chosen accommodation.Check into hotel      
+                 <br><strong> Afternoon: </strong> Explore South KolkataVisit the iconic Victoria Memorial. Stroll through the beautiful Maidan
+                 <br><strong>Evening: </strong>   Park StreetHead to Park Street for dinner at one of the many restaurants. Experience the vibrant nightlife of the city.<br>
+   
+    <br><strong> Day 2:</strong><br>Historical Kolkata
+                <br><strong>Morning:</strong> Howrah Bridge and Flower Market Start your day at the iconic Howrah Bridge. Visit the bustling Mullick Ghat Flower Market.
+                <br><strong> Afternoon:</strong>Indian Museum and Marble Palace Explore the Indian Museum, one of the oldest museums in Asia.     Visit Marble Palace, known for its stunning architecture and art collection.
+                <br><strong>Evening: </strong> Prinsep Ghat Enjoy a relaxing evening at Prinsep Ghat along the Hooghly River.  Take a boat ride if available.<br>
+     
+    <br><strong> Day 3:</strong><br> Cultural Immersion
+                <br><strong> Morning: </strong> Mother House and Kalighat Temple Visit Mother Teresa's Missionaries of Charity at Mother House.  Explore the Kalighat Temple, one of Kolkata's holiest sites.
+                <br><strong> Afternoon: </strong>College Street and Coffee House   Stroll through College Street, known for its bookstores.   Relax at the iconic Coffee House, a hub for intellectuals and artists.
+                <br><strong> Evening:</strong>Rabindra Sadan Attend a cultural performance at Rabindra Sadan.<br>
+  
+    <br><strong>Day 4:</strong><br> Art and Literature
+                <br><strong>Morning: </strong> Jorasanko Thakur Bari   Explore the ancestral home of the Tagore family.Visit the Tagore Museum.
+                <br><strong> Afternoon: </strong> Park Street Cultural Hub Visit the Academy of Fine Arts.   Explore the various art galleries on Park Street.
+                <br><strong> Evening: </strong>  Street Food at Dacre Street Enjoy Kolkata's famous street food at Dacre Street.<br>
+    
+    <br><strong>Day 5:</strong><br> Departure
+                 <br><strong> Morning: </strong>Dakshineswar Kali Temple Visit the Dakshineswar Kali Temple along the banks of the Hooghly River.
+                 <br><strong> Afternoon: </strong>Shopping at New MarketShop for souvenirs and local crafts at New Market.
+                 <br><strong>Evening:</strong> Departure  Depending on your departure time, you might have some time for last-minute exploration or relaxation. 
+
+     </p>
+    </div>
+</div>
+
+<div id="popup3" class="overlay" onclick="closePopup('popup3')">
+    <div class="popup">
+        <span class="close-btn" onclick="closePopup('popup3')">X</span>
+        <h2>6Night/7Day   package
+        </h2>
+        <p><strong>Day 1:</strong><br> Arrival in Kolkata
+                    <br><strong>Morning:</strong>Arrive in Kolkata and check into your hotel.Take some time to relax and freshen up.
+                    <br><strong>Afternoon:</strong>Lunch at nearby restaurants or in hotels
+                    <br><strong>Evening:</strong>In the evening, explore the local markets like New Market or Gariahat for shopping. Dinner at a local Bengali restaurant to savor authentic cuisine.Check into hotel <br>
+                             
+          <br><strong>Day 2:</strong><br> Historical Kolkata
+                      <br><strong> Morning</strong> visit to Victoria Memorial, an iconic historical monument.Explore the Indian Museum, one of the oldest and largest museums in India.
+                      <br><strong>Afternoon</strong>Lunch at a nearby restaurant.
+                      <br><strong>Evening</strong> visit to Howrah Bridge and Dakshineswar Kali Temple.stroll along the Hooghly River.<br>
+          
+          <br><strong>Day 3:</strong><br> Cultural Exploration
+                       <br><strong>Morning</strong> visit to the Marble Palace and Jorasanko Thakur Bari (Tagore's ancestral home).
+                       <br><strong>Lunch</strong> at a local eatery.
+                       <br><strong>Afternoon</strong> exploration of the Kalighat Kali Temple.Attend a cultural performance or visit a local art gallery in the evening.<br>
+          
+          <br><strong>Day 4:</strong><br> Eco-Tourism and Relaxation
+                      <br>Morning<strong> Visit the Kolkata Zoo or the Alipore Zoological Gardens in the .
+                      <br>Lunch<strong>  at a nearby restaurant.Spend the afternoon at the Eco Park for some greenery and relaxation.
+                      <br>Evening<strong>  at leisure.<br>
+
+          <br><strong>Day 5:</strong><br> Science City and Shopping
+                      <br><strong>Morning</strong> visit to Science City, especially if you're traveling with family.
+                      <br><strong> Lunch</strong> at a restaurant nearby.
+                      <br><strong>Afternoon</strong> shopping at South City Mall or Forum Courtyard.
+                      <br><strong>Evening</strong> at leisure.<br>
+
+          <br><strong>Day 6:</strong><br> Day Trip to Sundarbans
+                      <br><strong>Morning To Evening</strong>Take a day trip to the Sundarbans, the largest mangrove forest in the world. You can explore the wildlife and enjoy a boat ride. Return to Kolkata in the evening.
+                      Enjoy a traditional Bengali breakfast atDeener</strong>Enjoy a traditional Bengali deener at hotel or nearby any restrudent <br>
+
+          <br><strong> Day 7:</strong><br> Departure
+          <br><strong> Morning: </strong> Depending on your departure time, you may have some free time in the morning for last-minute shopping or sightseeing
+                 <br><strong> Afternoon: </strong>Enjoy Ganga Ghat for last minutes
+                 <br><strong>Evening:</strong>  Check out from the hotel and head to the airport for your departure.</p>
+
+        
+    </div>
+</div>
+
+<script>
+    // Function to open a specific popup
+    function openPopup(popupId) {
+        document.getElementById(popupId).style.display = 'flex';
+    }
+
+    // Function to close a specific popup
+    function closePopup(popupId) {
+        document.getElementById(popupId).style.display = 'none';
+    }
+</script>
+
+
+
+
+
+
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 5px;
+      background-color: #f4f4f4;
+      background-image: url(trip\ back.jpg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 20px;
+    }
+
+    .trip-plans {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 0px;
+    }
+
+    .trip-plan {
+      width: 100px;
+      height: 100px;
+      background-color: #4caf50;
+      color: #ffffff69;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .trip-plan:hover {
+      background-color: #45a049;
+    }
+
+    .hotel-list {
+      width: 80%;
+      background-color: #ffffffae;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #000000;
+    }
+
+    th {
+      background-color: rgb(66, 230, 194);
+      color: rgb(243, 55, 55)fff;
+    }
+
+    tr:hover {
+      background-color: #f5f5f5;
+    }
+
+    .hotel-image {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="hotel-list">
+  <table>
+    <thead>
+      <tr>
+        <th>Hotel</th>
+        <th>Location</th>
+        <th>Price</th>
+        <th>Photo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="glow"><a href="https://www.booking.com/hotel/in/the-oberoi-grand-kolkata.en-gb.html?aid=356980&label=gog235jc-1BCAMYCShsQghjYWxjdXR0YUgzWANobIgBAZgBCbgBF8gBDNgBAegBAYgCAagCA7gCoIHSqgbAAgHSAiQ2ZDg0YWUxYS0wODYyLTRjZTctYjAxNy02YjY2ZWMyNGQ3ZDTYAgXgAgE&sid=927ba92ef8f648611c7985a94d60fcee" target="_blank" style="color: #000000;"  class="noline">The Oberoi Grand Kolkata</a></td>
+        <td class="glow"><a href="https://maps.app.goo.gl/r9SxZyMhdVhv7wpP6" target="_blank"  class="noline" style="color: #000000;">  15 Jawaharlal Nehru Road, 560001 Kolkata, India </a></td>
+        <td style="color: #000000;">₹ 8,500/night</td>
+        <td><img class="hotel-image" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/07/d4/00/togbalcony.jpg?w=300&h=300&s=1" alt="Hotel 1"></td>
+      </tr>
+
+
+      <tr>
+        <td class="glow"><a href="https://www.booking.com/hotel/in/itc-royal-bengal-a-luxury-collection-kolkata.en-gb.html?aid=356980&label=gog235jc-1BCAMYCShsQghjYWxjdXR0YUgzWANobIgBAZgBCbgBF8gBDNgBAegBAYgCAagCA7gCpM_UqgbAAgHSAiQ4YzdhZjlkOS0xMWViLTQyZjctYjkzMi1kYjBlZTllYzY5YzfYAgXgAgE&sid=927ba92ef8f648611c7985a94d60fcee"target="_blank" style="color: #000000;" class="noline">ITC Royal Bengal</a></td>
+        <td class="glow"><a href="https://maps.app.goo.gl/Ukm1k7eEH17xMsYf7" target="_blank"  class="noline" style="color: #000000; "> 1 JBS Haldane Avenue, 700046 Kolkata, India </a></td>
+        <td style="color: #000000;">₹ 9,500/night</td>
+        <td><img class="hotel-image" src="https://cf2.bstatic.com/xdata/images/hotel/270x200/463617226.webp?k=26414508997a5b77c50ea7cc6c29a3f2c3f0de498ddd0ebefb3fa1959e56ad25&o=" alt="Hotel 2"></td>
+      </tr>
+
+
+      <tr>
+        <td class="glow"><a href="https://www.booking.com/hotel/in/itc-sonar-kolkata.en-gb.html?aid=356980&label=gog235jc-1BCAMYCShsQghjYWxjdXR0YUgzWANobIgBAZgBCbgBF8gBDNgBAegBAYgCAagCA7gCpInZqgbAAgHSAiQ4OWFkMzdkZi0yNmE4LTQ2MDMtOGY1Yi01NGUxMjgxOTNhYmXYAgXgAgE&sid=927ba92ef8f648611c7985a94d60fcee" target="_blank"  style="color: #000000;"  class="noline">ITC Sonar, a Luxury Collection Hotel</a></td>
+        <td class="glow"><a href="https://maps.app.goo.gl/uSnxtvkEDnCyzw1k7" target="_blank"  class="noline" style="color: #000000;"> JBS Haldane Avenue (Opp Science City), 700046 Kolkata, India </a></td>
+        <td style="color: #000000;">₹ 8,000/night</td>
+        <td><img class="hotel-image" src="https://cf2.bstatic.com/xdata/images/hotel/270x200/465554643.webp?k=de87f72be18dbaf984d010377f10cb18be0dbd6239ce8fa1cf4eae1f07189823&o= " alt="Hotel 2"></td>
+      </tr>
+
+
+
+
+
+
+
+
+
+
+      <tr>
+        <td class="glow"><a href="https://www.booking.com/hotel/in/raajkutir-a-boutique.en-gb.html?aid=356980&label=gog235jc-1BCAMYCShsQghjYWxjdXR0YUgzWANobIgBAZgBCbgBF8gBDNgBAegBAYgCAagCA7gCpInZqgbAAgHSAiQ4OWFkMzdkZi0yNmE4LTQ2MDMtOGY1Yi01NGUxMjgxOTNhYmXYAgXgAgE&sid=927ba92ef8f648611c7985a94d60fcee" target="_blank" style="color: #000000;" class="noline">Raajkutir - IHCL SeleQtions</a></td>
+        <td class="glow"><a href="https://maps.app.goo.gl/QAVwoE6W2bypNNKe7" style="color: #000000;" class="noline" target="_blank">EM Bypass, 89C Moulana Adul Kalam Azad Sarani, 700054 Kolkata, India </a></td>
+        <td style="color: #000000;">₹ 6,500/night</td>
+        <td><img class="hotel-image" src="https://cf2.bstatic.com/xdata/images/hotel/270x200/360514771.webp?k=9aeae9df46e33542b408736cc1a2dc448b51bc38aa1f2b8857bbf3a7339ca0f7&o=" alt="Hotel 2"></td>
+      </tr>
+
+      <tr>
+         <td class="glow"><a href="https://www.booking.com/hotel/in/the-westin-kolkata-rajarhat.en-gb.html?aid=356980&label=gog235jc-1BCAMYCShsQghjYWxjdXR0YUgzWANobIgBAZgBCbgBF8gBDNgBAegBAYgCAagCA7gCpInZqgbAAgHSAiQ4OWFkMzdkZi0yNmE4LTQ2MDMtOGY1Yi01NGUxMjgxOTNhYmXYAgXgAgE&sid=927ba92ef8f648611c7985a94d60fcee" target="_blank" style="color: #000000;"  class="noline">The Westin Kolkata Rajarhat</a></td>
+        <td class="glow"><a href="https://maps.app.goo.gl/6uUMi63ggRt8KJSD7" style="color: #000000;" class="noline" target="_blank">Plot No. CBD/2, 700156 Kolkata, India</a></td>
+        <td style="color: #000000;">₹ 6,700/night</td>
+        <td><img class="hotel-image" src="https://cf2.bstatic.com/xdata/images/hotel/270x200/467289048.webp?k=2371959c2bc46a7be6966a68c0d3ca5496fa421fcbae33ebca36720665bc2327&o=" alt="Hotel 2"></td>
+      </tr>
+
+      <tr>
+         <td class="glow"><a href="https://www.booking.com/hotel/in/the-rajbari-bawali.en-gb.html?aid=356980&label=gog235jc-1BCAMYCShsQghjYWxjdXR0YUgzWANobIgBAZgBCbgBF8gBDNgBAegBAYgCAagCA7gCpInZqgbAAgHSAiQ4OWFkMzdkZi0yNmE4LTQ2MDMtOGY1Yi01NGUxMjgxOTNhYmXYAgXgAgE&sid=927ba92ef8f648611c7985a94d60fcee" target="_blank" style="color: #000000;" class="noline">The Rajbari Bawali</a></td>
+         <td class="glow"><a href="https://maps.app.goo.gl/dfMFHfW2oxeu2XsL7" style="color: #000000;" class="noline" target="_blank">The Rajbari Bawali South 24 Parganas Near Bawali High School, 743384 Kolkata, India </a></td>
+        <td style="color: #000000;">₹ 8,125/night</td>
+        <td><img class="hotel-image" src="https://cf2.bstatic.com/xdata/images/hotel/270x200/96868750.webp?k=d7a3aa222ea7e35f1c9bba52515c7911eb453a07117447ee4e0bef02588de463&o=" alt="Hotel 2"></td>
+      </tr>
+
+      <tr>
+         <td class="glow"><a href="https://www.booking.com/hotel/in/jw-marriott-kolkata.en-gb.html?aid=356980&label=gog235jc-1BCAMYCShsQghjYWxjdXR0YUgzWANobIgBAZgBCbgBF8gBDNgBAegBAYgCAagCA7gCpInZqgbAAgHSAiQ4OWFkMzdkZi0yNmE4LTQ2MDMtOGY1Yi01NGUxMjgxOTNhYmXYAgXgAgE&sid=927ba92ef8f648611c7985a94d60fcee" target="_blank" style="color: #000000;"  class="noline">JW Marriott Hotel Kolkata</a></td>
+         <td class="glow"><a href="https://maps.app.goo.gl/Qhq3wnaRkY37Gik16" style="color: #000000;" class="noline" target="_blank">4A, J.B.S. Haldane Avenue, 700105 Kolkata, India</a></td>
+        <td style="color: #000000;">₹ 8,700/night</td>
+        <td><img class="hotel-image" src="https://cf2.bstatic.com/xdata/images/hotel/270x200/444117387.webp?k=17e3ecba933ddf924ef99e42e0ec7191d25bb730320e028155b9624fc1ddc585&o=" alt="Hotel 2"></td>
+      </tr>
+
+      <tr>
+         <td class="glow"><a href="https://www.booking.com/hotel/in/luxury-3bhk-apt-near-ruby-hospital-amp-em-bypass.en-gb.html?aid=356980&label=gog235jc-1BCAMYCShsQghjYWxjdXR0YUgzWANobIgBAZgBCbgBF8gBDNgBAegBAYgCAagCA7gCpInZqgbAAgHSAiQ4OWFkMzdkZi0yNmE4LTQ2MDMtOGY1Yi01NGUxMjgxOTNhYmXYAgXgAgE&sid=927ba92ef8f648611c7985a94d60fcee" target="_blank" style="color: #000000;" class="noline">Luxury 3BHK Apt near Ruby Hospital & EM Bypass</a></td>
+         <td class="glow"><a href="https://www.booking.com/hotel/in/luxury-3bhk-apt-near-ruby-hospital-amp-em-bypass.en-gb.html?aid=356980&label=gog235jc-1BCAMYCShsQghjYWxjdXR0YUgzWANobIgBAZgBCbgBF8gBDNgBAegBAYgCAagCA7gCpInZqgbAAgHSAiQ4OWFkMzdkZi0yNmE4LTQ2MDMtOGY1Yi01NGUxMjgxOTNhYmXYAgXgAgE&sid=927ba92ef8f648611c7985a94d60fcee#map_opened-hotel_header" style="color: #000000;" class="noline" target="_blank">393 Purbachal Main Road, 700099 Kolkata, India</a></td>
+        <td style="color: #000000;">₹ 4,275/night</td>
+        <td><img class="hotel-image" src="https://cf2.bstatic.com/xdata/images/hotel/270x200/478545648.webp?k=f2f52f3357a5eaaa0ccc6c68d68abd5d293383c020d269398a11f3fe36c87b67&o=" alt="Hotel 2"></td>
+      </tr>
+
+      <tr>
+         <td class="glow"><a href="https://www.booking.com/hotel/in/4bhk-duplex-lavish-penthouse.en-gb.html?aid=356980&label=gog235jc-1BCAMYCShsQghjYWxjdXR0YUgzWANobIgBAZgBCbgBF8gBDNgBAegBAYgCAagCA7gCpInZqgbAAgHSAiQ4OWFkMzdkZi0yNmE4LTQ2MDMtOGY1Yi01NGUxMjgxOTNhYmXYAgXgAgE&sid=927ba92ef8f648611c7985a94d60fcee" target="_blank" style="color: #000000;"  class="noline">Celestia Luxury Duplex Penthouse</a></td>
+         <td class="glow"><a href="https://maps.app.goo.gl/dDLfcDjCga4dA8Zd9" style="color: #000000;" class="noline" target="_blank">Swan court Block A3 Apartment 12 A, Newtown Eco Urban Village Nr Akanka more 12th , 12A, 700156 Kolkata, India</a></td>
+        <td style="color: #000000;">₹ 6,292/night</td>
+        <td><img class="hotel-image" src="https://cf2.bstatic.com/xdata/images/hotel/270x200/481567033.webp?k=eeee1c067ddd4e08ca71bdff05368f041272a438e971bfbde4992a2c525961b0&o=" alt="Hotel 2"></td>
+      </tr>
+
+
+      <tr>
+         <td class="glow"><a href="https://www.booking.com/hotel/in/ama-stays-amp-trails-25-farm-house-vedic-village-kolkata.en-gb.html?aid=356980&label=gog235jc-1BCAMYCShsQghjYWxjdXR0YUgzWANobIgBAZgBCbgBF8gBDNgBAegBAYgCAagCA7gCpInZqgbAAgHSAiQ4OWFkMzdkZi0yNmE4LTQ2MDMtOGY1Yi01NGUxMjgxOTNhYmXYAgXgAgE&sid=927ba92ef8f648611c7985a94d60fcee"  target="_blank" style="color: #000000;"  class="noline">ama Stays & Trails 25 Farm House, Vedic Village, Kolkata</a></td>
+         <td class="glow"><a href="https://maps.app.goo.gl/QCwAidi3NtvVJcXB9"  style="color: #000000;" class="noline" target="_blank">Vedic Village Plot no 25A,Vedic Village Scheme Mouza Chandpur Chapagachi Rajarhat, 700135 Kolkata, India </a></td>
+        <td style="color: #000000;">₹5,000/night</td>
+        <td><img class="hotel-image" src="https://cf2.bstatic.com/xdata/images/hotel/270x200/442845666.webp?k=3be558d3b239369770e696c34e1872566848d2d5b2b23d15b15cd9848cad0bdc&o=" alt="Hotel 2"></td>
+      </tr>
+      <!-- Add more hotel entries as needed -->
+    </tbody>
+  </table>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
