@@ -1,7 +1,5 @@
 # ExplorKOLKATA
 
-link-https://explore-kolkata.netlify.app/
-
 
 
 Our project focuses on creating an engaging and informative website page highlighting the "Top 10 Visiting Places in Kolkata." Leveraging the power of HTML, CSS, and JavaScript, our goal is to provide users with a visually appealing and interactive platform to explore the cultural and historical gems of this vibrant city.
